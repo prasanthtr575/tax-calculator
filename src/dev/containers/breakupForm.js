@@ -1,12 +1,12 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Col, FormGroup, Label, Input,Container } from 'reactstrap';
 
 const renderField=({ input, label,name, type, meta})=>(
     <FormGroup row>
                     <Label for={name} sm={2}>{label}</Label>
-                    <Col sm={10}>
-                    <input {...input} placeholder={label} type={type}></input>
+                    <Col sm={4}>
+                    <Input {...input} placeholder={label} type={type}></Input>
                      </Col>
     </FormGroup>
 )
@@ -14,12 +14,13 @@ const renderField=({ input, label,name, type, meta})=>(
 
 const BreakupForm=(props)=>{
     console.log(props);
-    const { handleSubmit, pristine, reset, submitting } = props
+    const { handleSubmit} = props
     return(
-        <div>
-        <Label >Breakup</Label>
+
+        <Container>
+        <Label ><b>Breakup</b></Label>
+        <Container>
         <form onSubmit={handleSubmit}>
-               
          <Field label="Basic" name="basic" component={renderField} type="text" placeholder="basic"/>
          <Field label="HRA" name="hra" component={renderField}  type="text" placeholder="HRA"/>
          <Field label="Transport Allowance" name="ta"  component={renderField}  type="text" placeholder="Transport Allowance" />
@@ -27,8 +28,8 @@ const BreakupForm=(props)=>{
          <Field label="LTA" name="lta" component={renderField}  type="text" placeholder="LTA"/>
          <Field label="Medical Bills"  name="medicalBills" component={renderField} type="text" placeholder="Medical Bills"/>
         </form>
-        </div>
-        
+        </Container>
+        </Container>
     )
 }
 
