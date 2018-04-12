@@ -1,11 +1,10 @@
 import React from 'react';
+import Header from './header'
 
 const AppMain =()=>{
 return(
     <div>
-        <header>
-          <h1>Tax Calculator</h1>
-        </header>
+        <Header/>
         <p>
           Work in Progress
         </p>
