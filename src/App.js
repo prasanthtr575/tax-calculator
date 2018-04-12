@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import allReducers from './dev/reducers/index'
-import { createStore, compose } from 'redux'
+import {createStore,compose} from 'redux'
 import AppMain from './dev/components/AppMain'
-import { Provider } from 'react-redux'
+import {Provider} from 'react-redux'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 class App extends Component {
     render() {

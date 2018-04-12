@@ -1,14 +1,12 @@
 import React from 'react';
+import Header from './header'
+import BreakupForm from '../containers/breakupForm'
 
 const AppMain =()=>{
 return(
     <div>
-        <header>
-          <h1>Tax Calculator</h1>
-        </header>
-        <p>
-          Work in Progress
-        </p>
+        <Header/>
+        <BreakupForm/>
       </div>
 )
 }
